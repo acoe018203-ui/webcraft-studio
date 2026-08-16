@@ -61,13 +61,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["Syne", "ui-sans-serif", "system-ui", "sans-serif"],
-        sans: [
-          "Plus Jakarta Sans",
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-        ],
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "radial-hero":

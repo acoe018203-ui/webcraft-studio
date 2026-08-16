@@ -1,28 +1,21 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 import SectionHeading from "@/components/SectionHeading";
 import { services } from "@/lib/data";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const accentMap = {
   emerald: {
     icon: "text-emerald",
     ring: "from-emerald/15 to-transparent",
-    badge: "border-emerald/30 bg-emerald/10 text-emerald",
   },
   violet: {
     icon: "text-violet",
     ring: "from-violet/15 to-transparent",
-    badge: "border-violet/30 bg-violet/10 text-violet",
   },
   gold: {
     icon: "text-gold",
     ring: "from-gold/15 to-transparent",
-    badge: "border-gold/30 bg-gold/10 text-gold",
   },
 } as const;
 
@@ -38,29 +31,20 @@ export default function Services() {
           eyebrow="Layanan Kami"
           title={
             <>
-              Solusi Digital Utuh untuk{" "}
-              <span className="text-gradient">Bisnis Anda</span>
+              Solusi Digital Utuh untuk <span className="text-gradient">Bisnis Anda</span>
             </>
           }
-          description="Dari desain hingga peluncuran, kami mengelola setiap detail untuk menghasilkan website mewah, cepat, dan berorientasi konversi."
+          description="Dari strategi, desain, pengembangan, sampai optimasi konversi — semua dibangun untuk hadir lebih cepat, lebih elegan, dan lebih menguntungkan."
         />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-        >
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(({ icon: Icon, title, description, points, accent }) => {
             const colors = accentMap[accent];
             return (
-              <motion.article
+              <article
                 key={title}
-                variants={staggerItem}
-                className="group relative overflow-hidden rounded-2xl glass-card p-6 glow-hover transition-transform duration-500 hover:-translate-y-1.5"
+                className="group relative overflow-hidden rounded-2xl glass-card p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-emerald/30"
               >
-                {/* ambient top glow */}
                 <div
                   className={cn(
                     "absolute -top-20 -right-16 h-40 w-40 rounded-full bg-gradient-to-br opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100",
@@ -97,10 +81,10 @@ export default function Services() {
                     ))}
                   </ul>
                 </div>
-              </motion.article>
+              </article>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

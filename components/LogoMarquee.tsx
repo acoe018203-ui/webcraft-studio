@@ -1,6 +1,5 @@
 import { clients } from "@/lib/data-social";
 
-/** Infinite scrolling client/partner logos with grayscale→color hover. */
 export default function LogoMarquee() {
   const row = (hidden: boolean) => (
     <ul

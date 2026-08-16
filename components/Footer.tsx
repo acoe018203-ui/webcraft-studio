@@ -1,17 +1,14 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
   ArrowUp,
   Instagram,
   Linkedin,
-  Twitter,
   Music2,
   Sparkles,
+  Twitter,
 } from "lucide-react";
 
 import { footerLinkGroups } from "@/lib/data-social";
-import { site, CONTACT } from "@/lib/site";
+import { CONTACT, site } from "@/lib/site";
 
 const socials = [
   { icon: Instagram, label: "Instagram", href: CONTACT.instagram },
@@ -28,9 +25,8 @@ export default function Footer() {
     >
       <div className="container py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="#beranda" className="flex items-center gap-2.5">
+            <a href="#beranda" className="flex items-center gap-2.5" aria-label="Beranda Webcraft Studio">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-tr from-emerald via-violet to-gold">
                 <Sparkles className="h-5 w-5 text-white" />
               </span>
@@ -39,8 +35,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Agensi pengembangan web premium yang menghadirkan website elegan,
-              interaktif, dan berperforma tinggi di Indonesia.
+              Agensi pengembangan web premium yang menghadirkan website elegan, responsif, dan berperforma tinggi untuk bisnis modern.
             </p>
             <div className="flex gap-2">
               {socials.map(({ icon: Icon, label, href }) => (
@@ -58,7 +53,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
           {footerLinkGroups.map((group) => (
             <nav key={group.title} aria-label={group.title}>
               <h3 className="mb-4 font-display text-sm font-bold uppercase tracking-widest text-foreground">
@@ -79,19 +73,17 @@ export default function Footer() {
             </nav>
           ))}
 
-          {/* Back to top */}
           <div className="flex flex-col gap-4">
             <h3 className="font-display text-sm font-bold uppercase tracking-widest text-foreground">
               Kembali ke Atas
             </h3>
-            <motion.a
+            <a
               href="#beranda"
               aria-label="Kembali ke atas"
-              whileHover={{ y: -4 }}
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-emerald transition-colors hover:border-emerald"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-emerald transition-colors hover:-translate-y-0.5 hover:border-emerald"
             >
               <ArrowUp className="h-5 w-5" />
-            </motion.a>
+            </a>
           </div>
         </div>
 

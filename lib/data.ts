@@ -10,7 +10,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-/* ---------------------------------- Services -------------------------------- */
 export interface Service {
   icon: LucideIcon;
   title: string;
@@ -24,37 +23,36 @@ export const services: Service[] = [
     icon: Palette,
     title: "Desain UI/UX Premium",
     description:
-      "Desain antarmuka penuh estetika dengan hierarki visual tajam, sistem desain modular, dan mikro-interaksi premium yang membuat pengunjung betah berlama-lama.",
-    points: ["Wireframe & Prototype", "Sistem Desain Modular", "Mikro-Interaksi"],
+      "Desain antarmuka elegan dengan hierarchy visual yang jelas, struktur informasi yang kuat, dan pengalaman brand yang konsisten untuk meningkatkan trust pada calon pelanggan.",
+    points: ["Wireframe Strategis", "Visual Premium", "UX Conversion"],
     accent: "emerald",
   },
   {
     icon: Boxes,
-    title: "Pengembangan Web & 3D Kustom",
+    title: "Pengembangan Web Kustom",
     description:
-      "Pengembangan website interaktif dengan visual 3D real-time, animasi sinematik, dan arsitektur kode modern yang mudah dikelola serta siap berkembang.",
-    points: ["React / Next.js", "Visual 3D & Animasi", "Kode Bersih & Modular"],
+      "Website modern dibangun dengan arsitektur yang rapi, responsif di semua perangkat, dan siap tumbuh sesuai kebutuhan bisnis Anda di masa depan.",
+    points: ["Next.js Modern", "Integrasi API", "Scalable Build"],
     accent: "violet",
   },
   {
     icon: Gauge,
-    title: "Optimasi SEO & Kecepatan",
+    title: "SEO & Kecepatan Maksimal",
     description:
-      "Optimasi teknis dari hulu ke hilir: kecepatan memuat 95+ Lighthouse, struktur semantik, dan SEO on-page yang membawa website Anda ke halaman satu Google.",
-    points: ["Lighthouse 95+", "HTML Semantik & Metadata", "Core Web Vitals"],
+      "Struktur teknis yang bersih, Core Web Vitals terjaga, serta optimasi on-page yang membantu website tampil cepat dan lebih mudah ditemukan di Google.",
+    points: ["Lighthouse 95+", "Meta SEO", "Kecepatan Tinggi"],
     accent: "gold",
   },
   {
     icon: TrendingUp,
-    title: "Optimasi Mesin Konversi",
+    title: "Konversi & Penjualan",
     description:
-      "Riset psikologi pengunjung, desain alur konversi, serta CTA yang dirancang untuk mengubah pengunjung menjadi pelanggan yang membayar.",
-    points: ["Copywriting Konversi", "A/B Testing", "Analitik & Pelacakan"],
+      "Setiap elemen dikemas untuk memandu pengunjung menuju tindakan: kontak, inquiry, hingga transaksi. Hasilnya lebih banyak prospek yang siap dibahas.",
+    points: ["Copywriting CTA", "Funnel & Trust", "Lead Generation"],
     accent: "emerald",
   },
 ];
 
-/* ---------------------------------- Portfolio ------------------------------- */
 export interface Project {
   title: string;
   category: string;
@@ -69,16 +67,16 @@ export const projects: Project[] = [
     title: "Nusa Realty",
     category: "Properti & Real Estate",
     description:
-      "Platform website properti mewah dengan fitur tur virtual 360°, galeri interaktif, dan sistem integrasi jadwal kunjungan calon pembeli.",
+      "Platform penjualan properti premium dengan galeri visual yang mewah, navigasi cepat, dan CTA yang memudahkan calon pembeli menghubungi tim.",
     gradient: "from-emerald-500/30 via-violet-500/20 to-transparent",
     year: "2025",
     liveUrl: "#",
   },
   {
-    title: "Pulse Fitness App",
-    category: "Aplikasi & Gym",
+    title: "Pulse Fitness",
+    category: "Gym & Lifestyle",
     description:
-      "Landing page modern untuk jaringan pusat kebugaran, dilengkapi fitur pemilihan paket membership, jadwal kelas interaktif, dan integrasi pembayaran.",
+      "Landing page fitness berorientasi konversi dengan paket membership, jadwal kelas, dan alur inquiry yang jelas untuk menaikkan penjualan.",
     gradient: "from-violet-500/30 via-gold-500/15 to-transparent",
     year: "2025",
     liveUrl: "#",
@@ -87,23 +85,22 @@ export const projects: Project[] = [
     title: "Garuda Finance",
     category: "Fintech & Perusahaan",
     description:
-      "Website profil perusahaan fintech profesional dengan tampilan dashboard interaktif, standar keamanan tinggi, dan penyampaian informasi yang intuitif.",
+      "Website perusahaan dengan citra profesional, informasi keuangan yang mudah dibaca, dan desain yang memperkuat kredibilitas brand.",
     gradient: "from-gold-500/30 via-emerald-500/15 to-transparent",
     year: "2024",
     liveUrl: "#",
   },
   {
-    title: "Aurora E-commerce",
+    title: "Aurora Commerce",
     category: "Toko Online Modern",
     description:
-      "Platform e-commerce performa tinggi dengan fitur filter produk cerdas, proses checkout yang cepat, dan optimasi kecepatan muat halaman.",
+      "Storefront modern yang fokus pada pengalaman checkout, visual produk premium, dan performa cepat untuk menjaga tingkat penjualan tetap tinggi.",
     gradient: "from-violet-500/30 via-emerald-500/15 to-transparent",
     year: "2024",
     liveUrl: "#",
   },
 ];
 
-/* ----------------------------------- Process -------------------------------- */
 export interface Step {
   number: string;
   title: string;
@@ -115,24 +112,24 @@ export const processSteps: Step[] = [
     number: "01",
     title: "Briefing",
     description:
-      "Kami memetakan visi, target pasar, dan tujuan bisnis Anda melalui sesi konsultasi mendalam.",
+      "Kami memahami visi, target pasar, dan tujuan bisnis Anda agar strategi web selaras dengan kebutuhan yang nyata.",
   },
   {
     number: "02",
     title: "UI/UX Premium",
     description:
-      "Wireframe hingga desain final dengan fokus pada pengalaman pengguna dan konversi.",
+      "Membuat struktur informasi, wireframe, dan visual premium yang mudah dipahami dan mendorong keputusan pelanggan.",
   },
   {
     number: "03",
     title: "Pengembangan",
     description:
-      "Front-end presisi, animasi halus, 3D interaktif, dan optimasi performa menyeluruh.",
+      "Website dibangun dengan performa tinggi, responsif, dan efisien dari sisi SEO dan pengalaman pengguna.",
   },
   {
     number: "04",
     title: "Peluncuran",
     description:
-      "Quality assurance, peluncuran, serta monitoring performa pasca-launch bersama tim Anda.",
+      "Proses uji kualitas, peluncuran, dan evaluasi lanjutan agar website terus membantu pertumbuhan bisnis Anda.",
   },
 ];

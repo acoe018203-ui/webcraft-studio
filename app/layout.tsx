@@ -1,21 +1,73 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
-import "@fontsource/syne/500.css";
-import "@fontsource/syne/600.css";
-import "@fontsource/syne/700.css";
-import "@fontsource/syne/800.css";
-import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
-import "@fontsource/plus-jakarta-sans/700.css";
-
 import "./globals.css";
-import { site, SITE_URL, structuredData, CONTACT } from "@/lib/site";
+import { site, SITE_URL, structuredData } from "@/lib/site";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: "Webcraft Studio — Agensi Pembuatan Website Premium & Konversi Tinggi",
+  description:
+    "Jasa pembuatan website profesional, cepat, dan elegan untuk tingkatkan kredibilitas serta penjualan bisnis Anda. Mulai dari Rp 965rb.",
+  keywords: [
+    "jasa pembuatan website",
+    "website perusahaan",
+    "landing page premium",
+    "SEO website",
+    "UI UX design Indonesia",
+    "Webcraft Studio",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Webcraft Studio — Agensi Pembuatan Website Premium & Konversi Tinggi",
+    description:
+      "Jasa pembuatan website profesional, cepat, dan elegan untuk tingkatkan kredibilitas serta penjualan bisnis Anda. Mulai dari Rp 965rb.",
+    url: SITE_URL,
+    siteName: "Webcraft Studio",
+    locale: "id_ID",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Webcraft Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Webcraft Studio — Agensi Pembuatan Website Premium & Konversi Tinggi",
+    description:
+      "Jasa pembuatan website profesional, cepat, dan elegan untuk tingkatkan kredibilitas serta penjualan bisnis Anda. Mulai dari Rp 965rb.",
+    images: ["/og-image.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#070A0F",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -24,9 +76,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id">
+    <html lang="id" className={`${inter.variable} ${plusJakarta.variable}`}>
       <head>
-        {/* Meta Pixel Code */}
+        <meta name="application-name" content={site.name} />
+        <meta name="apple-mobile-web-app-title" content={site.name} />
+        <meta name="format-detection" content="telephone=yes" />
+        <Script id="webcraft-structured-data" type="application/ld+json" strategy="beforeInteractive">
+          {structuredData}
+        </Script>
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -51,7 +108,9 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body>{children}</body>
+      <body className={`${inter.className} bg-[#070A0F] text-foreground`}>
+        {children}
+      </body>
     </html>
   );
 }

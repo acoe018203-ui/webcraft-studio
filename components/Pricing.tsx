@@ -1,13 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Check, Rocket, ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Rocket } from "lucide-react";
 
 import SectionHeading from "@/components/SectionHeading";
-import { Button } from "@/components/ui/button";
-import MagneticButton from "@/components/MagneticButton";
 import { plans } from "@/lib/data-social";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 import { cn, waLink } from "@/lib/utils";
 
 export default function Pricing() {
@@ -25,25 +19,18 @@ export default function Pricing() {
               Investasi Cerdas, <span className="text-gradient">Skala Menyesuaikan</span>
             </>
           }
-          description="Paket transparan tanpa biaya tersembunyi. Pilih sesuai kebutuhan, atau konsultasikan kebutuhan khusus Anda."
+          description="Paket kami dibuat transparan dan mudah dibaca, dengan harga yang jelas untuk kebutuhan bisnis yang beragam."
         />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-14 grid items-stretch gap-6 lg:grid-cols-3"
-        >
+        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
-            <motion.article
+            <article
               key={plan.name}
-              variants={staggerItem}
               className={cn(
-                "relative flex flex-col rounded-3xl p-7 transition-transform duration-500 hover:-translate-y-1.5",
+                "relative flex flex-col rounded-3xl p-7 transition-all duration-500 hover:-translate-y-1.5",
                 plan.highlighted
                   ? "border-2 border-emerald/60 bg-gradient-to-b from-emerald/10 to-violet/5 shadow-neon-emerald lg:scale-[1.04]"
-                  : "glass-card glow-hover"
+                  : "glass-card"
               )}
             >
               {plan.badge && (
@@ -76,29 +63,29 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <MagneticButton className="mt-8 w-full">
-                <Button
-                  asChild
-                  variant={plan.highlighted ? "gradient" : "glass"}
-                  className="w-full"
-                >
-                  <a
-                    href={waLink(plan.waMessage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Pilih {plan.name} <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
-              </MagneticButton>
-            </motion.article>
+              <a
+                href={waLink(plan.waMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Pilih paket ${plan.name}`}
+                className={cn(
+                  "mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300",
+                  plan.highlighted
+                    ? "bg-gradient-to-r from-emerald via-violet to-gold text-white shadow-glow-card hover:brightness-110"
+                    : "border border-white/10 bg-white/[0.03] text-foreground hover:border-emerald/60 hover:bg-white/[0.06]"
+                )}
+              >
+                Pilih {plan.name} <ArrowRight className="h-4 w-4" />
+              </a>
+            </article>
           ))}
-        </motion.div>
+        </div>
 
         <p className="mt-10 text-center text-sm text-muted-foreground">
           Butuh solusi yang disesuaikan?{" "}
           <a
             href="#kontak"
+            aria-label="Konsultasikan kebutuhan Anda"
             className="font-semibold text-emerald transition-colors hover:text-violet"
           >
             Konsultasikan kebutuhan Anda →

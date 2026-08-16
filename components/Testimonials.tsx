@@ -1,11 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 import SectionHeading from "@/components/SectionHeading";
 import { testimonials } from "@/lib/data-social";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 
 function Stars() {
   return (
@@ -35,18 +31,11 @@ export default function Testimonials() {
           description="Kepuasan dan hasil nyata adalah ukuran keberhasilan kami."
         />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-14 grid gap-6 sm:grid-cols-2"
-        >
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {testimonials.map((t) => (
-            <motion.figure
+            <figure
               key={t.name}
-              variants={staggerItem}
-              className="relative flex flex-col gap-5 rounded-2xl glass-card p-7 glow-hover"
+              className="relative flex flex-col gap-5 rounded-2xl glass-card p-7 transition-all duration-300 hover:border-emerald/30"
             >
               <Quote className="absolute right-6 top-6 h-9 w-9 text-white/[0.06]" />
 
@@ -64,9 +53,9 @@ export default function Testimonials() {
                   <div className="text-sm text-muted-foreground">{t.company}</div>
                 </div>
               </figcaption>
-            </motion.figure>
+            </figure>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

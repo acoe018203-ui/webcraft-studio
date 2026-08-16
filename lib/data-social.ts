@@ -3,14 +3,12 @@
  * All user-facing copy is professional Bahasa Indonesia.
  */
 
-/* ---------------------------------- Navbar --------------------------------- */
 export const navLinks = [
   { label: "Layanan", href: "#layanan" },
   { label: "Proses", href: "#proses" },
   { label: "Harga", href: "#harga" },
 ];
 
-/* ----------------------------------- Clients ---------------------------- */
 export const clients = [
   "Next.js",
   "React",
@@ -20,7 +18,6 @@ export const clients = [
   "Figma",
 ];
 
-/* ----------------------------------- Pricing -------------------------------- */
 export interface Plan {
   name: string;
   price: string;
@@ -34,52 +31,51 @@ export interface Plan {
 
 export const plans: Plan[] = [
   {
-    name: "Standar",
+    name: "Standard",
     price: "Rp 965.000",
     unit: "per proyek",
-    description: "Solusi efisien untuk landing page bisnis atau personal branding yang ingin hadir lebih profesional.",
+    description:
+      "Landing Page Cepat, Design Modern, Integrasi WA, dan SEO Dasar untuk bisnis yang ingin tampil profesional tanpa biaya berlebih.",
     features: [
-      "1 Halaman Responsif",
-      "Integrasi WhatsApp Langsung",
-      "Optimasi SEO Dasar",
-      "Loading Cepat 90+",
+      "1 halaman fokus konversi",
+      "Desain modern & responsif",
+      "Integrasi WhatsApp langsung",
+      "SEO dasar + kecepatan ringan",
     ],
-    waMessage:
-      "Halo Webcraft Studio! Saya tertarik dengan paket Standar (Rp 965.000). Bisa dibantu?",
+    waMessage: "Halo Webcraft Studio, saya ingin konsultasi pembuatan website.",
   },
   {
     name: "Pro",
     price: "Rp 1.500.000",
     unit: "per proyek",
-    description: "Paket lengkap untuk meningkatkan kredibilitas brand dan memperbaiki konversi secara nyata.",
+    description:
+      "Website multi-halaman premium dengan custom design, animasi smooth, dan strategi SEO lengkap untuk menjangkau lebih banyak lead.",
     features: [
-      "Multi-halaman (hingga 5 Halaman)",
-      "Animasi Halus & Interaktif",
-      "SEO On-Page & Optimasi Kecepatan",
-      "Form Kontak & Analitik",
+      "Multi-halaman hingga 5 halaman",
+      "Custom design & motion halus",
+      "SEO lengkap & struktur teknis",
+      "Form kontak & integrasi analitik",
     ],
     highlighted: true,
     badge: "Paling Populer",
-    waMessage:
-      "Halo Webcraft Studio! Saya ingin paket Pro (Rp 1.500.000) untuk bisnis saya.",
+    waMessage: "Halo Webcraft Studio, saya ingin konsultasi pembuatan website.",
   },
   {
-    name: "Kustom",
-    price: "Kustom",
+    name: "Custom",
+    price: "Custom",
     unit: "sesuai kebutuhan",
-    description: "Solusi eksklusif untuk fitur khusus, skala besar, dan kebutuhan bisnis yang lebih kompleks.",
+    description:
+      "Solusi enterprise dan web application dengan fitur khusus, skalabilitas tinggi, dan support prioritas untuk kebutuhan kompleks.",
     features: [
-      "Desain 3D & Motion Kustom",
-      "Integrasi CMS / E-commerce",
-      "Arsitektur & API Khusus",
-      "Prioritas Dukungan",
+      "Desain eksklusif & fitur khusus",
+      "CMS atau sistem internal custom",
+      "Integrasi API & backend",
+      "Prioritas support & pengembangan",
     ],
-    waMessage:
-      "Halo Webcraft Studio! Saya ingin paket Kustom. Mohon infonya mengenai kebutuhan khusus.",
+    waMessage: "Halo Webcraft Studio, saya ingin konsultasi pembuatan website.",
   },
 ];
 
-/* --------------------------------- Testimonials ----------------------------- */
 export interface Testimonial {
   quote: string;
   name: string;
@@ -90,28 +86,27 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Desain website sangat bersih dan sesuai standar brand kami. Proses pengerjaan tepat waktu dan tim sangat komunikatif.",
+      "Website baru kami terlihat premium, fast, dan sangat mudah digunakan. Prosesnya rapi dan hasilnya sejalan dengan brand yang kami inginkan.",
     name: "Hendra Wijaya",
     company: "Nusa Realty",
     avatar: "HW",
   },
   {
     quote:
-      "Kecepatan muat halaman dan alur pemesanan di website baru kami meningkat pesat. Pengunjung merasa jauh lebih nyaman.",
+      "Kecepatan loading dan desain alur pembelian meningkat signifikan. Kami mendapatkan lebih banyak inquiry dari calon customer yang serius.",
     name: "Maya Putri",
     company: "Pulse Fitness",
     avatar: "MP",
   },
   {
     quote:
-      "Sangat puas dengan hasil akhir. Tampilan profesional dan integrasi WhatsApp memudahkan calon klien menghubungi kami secara langsung.",
+      "Timnya komunikatif dan responsif. Hasil akhirnya sesuai standard perusahaan dan membuat brand kami terasa lebih profesional di mata klien.",
     name: "Budi Santoso",
     company: "Garuda Finance",
     avatar: "BS",
   },
 ];
 
-/* ---------------------------------- Footer --------------------------------- */
 export const footerLinkGroups = [
   {
     title: "Produk",
