@@ -78,19 +78,14 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center">
                   <a
                     href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald transition-colors hover:text-violet"
                   >
-                    Detail Proyek <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                  <span className="h-1 w-1 rounded-full bg-white/20" />
-                  <a
-                    href={project.liveUrl}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    Pratinjau Langsung
+                    Lihat Proyek <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>

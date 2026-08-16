@@ -84,7 +84,6 @@ export const plans: Plan[] = [
 export interface Testimonial {
   quote: string;
   name: string;
-  role: string;
   company: string;
   avatar: string;
 }
@@ -94,7 +93,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "Desain website sangat bersih dan sesuai standar brand kami. Proses pengerjaan tepat waktu dan tim sangat komunikatif.",
     name: "Hendra Wijaya",
-    role: "Founder",
     company: "Nusa Realty",
     avatar: "HW",
   },
@@ -102,7 +100,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "Kecepatan muat halaman dan alur pemesanan di website baru kami meningkat pesat. Pengunjung merasa jauh lebih nyaman.",
     name: "Maya Putri",
-    role: "Marketing Lead",
     company: "Pulse Fitness",
     avatar: "MP",
   },
@@ -110,7 +107,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "Sangat puas dengan hasil akhir. Tampilan profesional dan integrasi WhatsApp memudahkan calon klien menghubungi kami secara langsung.",
     name: "Budi Santoso",
-    role: "Direktur",
     company: "Garuda Finance",
     avatar: "BS",
   },

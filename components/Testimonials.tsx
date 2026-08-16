@@ -61,9 +61,7 @@ export default function Testimonials() {
                 </span>
                 <div>
                   <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {t.role} · {t.company}
-                  </div>
+                  <div className="text-sm text-muted-foreground">{t.company}</div>
                 </div>
               </figcaption>
             </motion.figure>
