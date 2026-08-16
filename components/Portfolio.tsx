@@ -20,7 +20,7 @@ export default function Portfolio() {
           eyebrow="Portofolio"
           title={
             <>
-              Hasil Karya yang <span className="text-gradient">Berbicara</span>
+              Studi Kasus & Proyek Pilihan
             </>
           }
           description="Setiap proyek kami kembangan dengan standar tinggi — interaktif, cepat, dan dirancang untuk menghasilkan hasil nyata."

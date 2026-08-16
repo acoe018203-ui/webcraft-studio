@@ -11,18 +11,14 @@ export const navLinks = [
   { label: "Harga", href: "#harga" },
 ];
 
-/* --------------------------------- Client logos ---------------------------- */
+/* ----------------------------------- Clients ---------------------------- */
 export const clients = [
-  "Nusantara Digital",
-  "Kreasi Media",
-  "TechNusa",
-  "Bali Ventures",
-  "Studio Garuda",
-  "Jakarta Labs",
-  "Sana Company",
-  "Aurora Fintech",
-  "Prima E-commerce",
-  "Selatan Group",
+  "Next.js",
+  "React",
+  "Tailwind CSS",
+  "TypeScript",
+  "Vercel",
+  "Figma",
 ];
 
 /* ----------------------------------- Pricing -------------------------------- */
@@ -39,55 +35,48 @@ export interface Plan {
 
 export const plans: Plan[] = [
   {
-    name: "Starter Landing",
-    price: "Rp 3.500.000",
+    name: "Standard",
+    price: "Rp 965.000",
     unit: "per proyek",
-    description: "Landing page premium 1 halaman yang cepat, elegan, dan siap konversi.",
+    description: "Efficient solution for business landing pages or personal branding.",
     features: [
-      "1 halaman landing premium",
-      "Desain UI/UX responsif",
-      "Optimasi SEO on-page",
-      "Kecepatan Lighthouse 90+",
-      "Revisi 2 kali",
-      "Pengiriman 5-7 hari kerja",
+      "1 Responsive Page",
+      "Direct WhatsApp Integration",
+      "Basic SEO Optimization",
+      "Fast Loading 90+",
     ],
     waMessage:
-      "Halo Webcraft Studio! Saya tertarik dengan paket Starter Landing (Rp 3.500.000). Bisa dibantu?",
+      "Halo Webcraft Studio! Saya tertarik dengan paket Standard (Rp 965.000). Bisa dibantu?",
   },
   {
-    name: "Pro 3D Agency",
-    price: "Rp 7.500.000",
+    name: "Pro",
+    price: "Rp 1.500.000",
     unit: "per proyek",
-    description: "Landing page interaktif dengan visual 3D & animasi sinematik kelas agensi.",
+    description: "Complete package to boost business credibility & conversions.",
     features: [
-      "Semua fitur Starter Landing",
-      "Visual 3D interaktif custom",
-      "Animasi & motion premium",
-      "Copywriting berbahasa konversi",
-      "Integrasi WhatsApp & form",
-      "Optimasi Lighthouse 95+",
-      "Revisi 5 kali",
+      "Multi-page (Up to 5 Pages)",
+      "Smooth & Interactive Animations",
+      "On-Page SEO & Speed Optimization",
+      "Contact Form & Analytics",
     ],
     highlighted: true,
     badge: "Paling Populer",
     waMessage:
-      "Halo Webcraft Studio! Saya ingin paket Pro 3D Agency (Rp 7.500.000) dengan visual 3D interaktif.",
+      "Halo Webcraft Studio! Saya ingin paket Pro (Rp 1.500.000) untuk bisnis saya.",
   },
   {
-    name: "Enterprise Custom",
+    name: "Custom",
     price: "Custom",
     unit: "sesuai kebutuhan",
-    description: "Solusi penuh skala besar dengan tim khusus dan SLA prioritas tinggi.",
+    description: "Exclusive solution for custom features and large-scale needs.",
     features: [
-      "Fitur Pro 3D Agency",
-      "Multi-halaman & sistem CMS",
-      "Branding & design system khusus",
-      "Tim developer dedicated",
-      "Maintenance & SLA prioritas",
-      "Konsultasi strategi digital",
+      "Custom 3D/Motion Design",
+      "CMS / E-commerce Integration",
+      "Custom Architecture & API",
+      "Priority Support",
     ],
     waMessage:
-      "Halo Webcraft Studio! Saya ingin berkonsultasi untuk paket Enterprise Custom. Mohon infonya.",
+      "Halo Webcraft Studio! Saya ingin paket Custom. Mohon infonya mengenai kebutuhan khusus.",
   },
 ];
 

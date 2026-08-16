@@ -24,8 +24,8 @@ const Hero3D = dynamic(() => import("@/components/Hero3D"), {
 });
 
 const stats = [
-  { icon: TrendingUp, label: "Proyek Selesai", value: "124+" },
-  { icon: Star, label: "Rating Klien", value: "5.0" },
+  { icon: TrendingUp, label: "On-Time Delivery", value: "100%" },
+  { icon: Star, label: "24/7 Dedicated Support", value: "Available" },
   { icon: Gauge, label: "Skor Lighthouse", value: "98" },
 ];
 

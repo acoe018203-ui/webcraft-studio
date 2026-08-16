@@ -27,7 +27,7 @@ export default function LogoMarquee() {
     >
       <div className="container">
         <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-          Dipercaya oleh brand &amp; perusahaan terbaik
+          Teknologi & Standar Performa Kami
         </p>
       </div>
       <div className="marquee-mask overflow-hidden" role="presentation">
