@@ -67,27 +67,27 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Nusa Realty",
-    category: "3D Interaktif & Animasi",
+    category: "Properti & Real Estate",
     description:
-      "Platform properti premium yang menghadirkan pengalaman tur virtual yang mewah, storytelling brand yang kuat, dan peningkatan minat calon pembeli sebesar 3,4x dalam 60 hari pasca peluncuran.",
+      "Platform website properti mewah dengan fitur tur virtual 360°, galeri interaktif, dan sistem integrasi jadwal kunjungan calon pembeli.",
     gradient: "from-emerald-500/30 via-violet-500/20 to-transparent",
     year: "2025",
     liveUrl: "#",
   },
   {
     title: "Pulse Fitness App",
-    category: "Landing Page Konversi Tinggi",
+    category: "Aplikasi & Gym",
     description:
-      "Landing page fitness yang dioptimalkan untuk penjualan paket membership, menghasilkan lonjakan pendaftaran hingga +84% berkat struktur CTA yang jelas, copywriting yang persuasif, dan UX yang terasa premium.",
+      "Landing page modern untuk jaringan pusat kebugaran, dilengkapi fitur pemilihan paket membership, jadwal kelas interaktif, dan integrasi pembayaran.",
     gradient: "from-violet-500/30 via-gold-500/15 to-transparent",
     year: "2025",
     liveUrl: "#",
   },
   {
     title: "Garuda Finance",
-    category: "Profil Perusahaan & SaaS",
+    category: "Fintech & Perusahaan",
     description:
-      "Website perusahaan fintech yang mentransformasi citra brand menjadi lebih kredibel, dengan dashboard produk, narasi trust-building, dan pengalaman digital yang memperkuat penjualan B2B secara signifikan.",
+      "Website profil perusahaan fintech profesional dengan tampilan dashboard interaktif, standar keamanan tinggi, dan penyampaian informasi yang intuitif.",
     gradient: "from-gold-500/30 via-emerald-500/15 to-transparent",
     year: "2024",
     liveUrl: "#",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     title: "Aurora E-commerce",
     category: "Toko Online Modern",
     description:
-      "Toko online berkecepatan tinggi dengan UX checkout yang mulus, visual produk yang dinamis, dan optimasi konversi yang menurunkan friction pembelian sekaligus menaikkan rata-rata order value hingga +31%.",
+      "Platform e-commerce performa tinggi dengan fitur filter produk cerdas, proses checkout yang cepat, dan optimasi kecepatan muat halaman.",
     gradient: "from-violet-500/30 via-emerald-500/15 to-transparent",
     year: "2024",
     liveUrl: "#",

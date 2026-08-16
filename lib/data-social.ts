@@ -92,35 +92,27 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Landing page 3D yang dibuat Webcraft Studio melampaui ekspektasi. Konversi kami naik 3x lipat dalam dua bulan pertama.",
-    name: "Rizky Pratama",
-    role: "CEO",
-    company: "Nusa Realty",
-    avatar: "RP",
-  },
-  {
-    quote:
-      "Prosesnya sangat profesional dan komunikatif. Skor Lighthouse tembus 98, loading sepersekian detik. Luar biasa.",
-    name: "Sari Dewi",
-    role: "Head of Marketing",
-    company: "Pulse Fitness",
-    avatar: "SD",
-  },
-  {
-    quote:
-      "Visual 3D-nya membuat brand kami terlihat premium. Banyak klien yang memuji desain website kami sejak diluncurkan.",
-    name: "Bagus Wirawan",
+      "Desain website sangat bersih dan sesuai standar brand kami. Proses pengerjaan tepat waktu dan tim sangat komunikatif.",
+    name: "Hendra Wijaya",
     role: "Founder",
-    company: "Garuda Finance",
-    avatar: "BW",
+    company: "Nusa Realty",
+    avatar: "HW",
   },
   {
     quote:
-      "Tim Webcraft Studio memahami betul psikologi customer kami. CTA dan copywriting-nya benar-benar work.",
-    name: "Melati Anggraini",
-    role: "Growth Lead",
-    company: "Aurora E-commerce",
-    avatar: "MA",
+      "Kecepatan muat halaman dan alur pemesanan di website baru kami meningkat pesat. Pengunjung merasa jauh lebih nyaman.",
+    name: "Maya Putri",
+    role: "Marketing Lead",
+    company: "Pulse Fitness",
+    avatar: "MP",
+  },
+  {
+    quote:
+      "Sangat puas dengan hasil akhir. Tampilan profesional dan integrasi WhatsApp memudahkan calon klien menghubungi kami secara langsung.",
+    name: "Budi Santoso",
+    role: "Direktur",
+    company: "Garuda Finance",
+    avatar: "BS",
   },
 ];
 
