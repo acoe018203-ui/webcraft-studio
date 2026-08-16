@@ -1,17 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Send, MessageCircle } from "lucide-react";
+import { MessageCircle, Send } from "lucide-react";
 
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import MagneticButton from "@/components/MagneticButton";
-import { waLink } from "@/lib/utils";
+import { Textarea } from "@/components/ui/textarea";
 import { CONTACT } from "@/lib/site";
+import { waLink } from "@/lib/utils";
 
 export default function ContactCTA() {
   const [form, setForm] = useState({
@@ -77,35 +75,30 @@ export default function ContactCTA() {
             </li>
           </ul>
 
-          <MagneticButton>
-            <Button
-              asChild
-              variant="gradient"
-              size="lg"
-              className="h-14 w-fit px-8"
+          <Button
+            asChild
+            variant="gradient"
+            size="lg"
+            className="h-14 w-fit px-8"
+          >
+            <a
+              href={waLink(
+                "Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website."
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat WhatsApp sekarang"
             >
-              <a
-                href={waLink(
-                  "Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Chat WhatsApp Sekarang
-              </a>
-            </Button>
-          </MagneticButton>
+              <MessageCircle className="h-5 w-5" />
+              Chat WhatsApp Sekarang
+            </a>
+          </Button>
         </div>
 
         {/* Glassmorphic form */}
-        <motion.form
+        <form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col gap-5 rounded-3xl glass-card p-7 sm:p-9"
+          className="flex flex-col gap-5 rounded-3xl glass-card p-7 transition-all duration-300 sm:p-9"
         >
           <div>
             <h3 className="font-display text-2xl font-bold">Mulai Konsultasi Gratis</h3>
@@ -159,7 +152,7 @@ export default function ContactCTA() {
               {CONTACT.email}
             </a>
           </p>
-        </motion.form>
+        </form>
       </div>
     </section>
   );

@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, Sparkles, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import MagneticButton from "@/components/MagneticButton";
 import { navLinks } from "@/lib/data-social";
 import { cn, waLink } from "@/lib/utils";
 
@@ -67,17 +65,16 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
-          <MagneticButton>
-            <Button asChild size="default" className="h-11">
-              <a
-                href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Konsultasi Gratis
-              </a>
-            </Button>
-          </MagneticButton>
+          <Button asChild size="default" className="h-11">
+            <a
+              href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Konsultasi gratis via WhatsApp"
+            >
+              Konsultasi Gratis
+            </a>
+          </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -91,42 +88,37 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile panel */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.25 }}
-            className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-[#0d0e15]/90 p-4 backdrop-blur-xl md:hidden"
-          >
-            <ul className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <Button asChild className="mt-3 w-full">
-              <a
-                href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-              >
-                Konsultasi Gratis
-              </a>
-            </Button>
-          </motion.div>
+      <div
+        className={cn(
+          "mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-[#0d0e15]/90 p-4 backdrop-blur-xl transition-all duration-300 md:hidden",
+          open ? "opacity-100 translate-y-0" : "pointer-events-none hidden opacity-0 -translate-y-2"
         )}
-      </AnimatePresence>
+      >
+        <ul className="flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block rounded-xl px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <Button asChild className="mt-3 w-full">
+          <a
+            href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            aria-label="Konsultasi gratis melalui WhatsApp"
+          >
+            Konsultasi Gratis
+          </a>
+        </Button>
+      </div>
     </header>
   );
 }
