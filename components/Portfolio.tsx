@@ -83,14 +83,14 @@ export default function Portfolio() {
                     href={project.liveUrl}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald transition-colors hover:text-violet"
                   >
-                    Lihat Proyek <ArrowUpRight className="h-4 w-4" />
+                    Detail Proyek <ArrowUpRight className="h-4 w-4" />
                   </a>
                   <span className="h-1 w-1 rounded-full bg-white/20" />
                   <a
                     href={project.liveUrl}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    Preview Live
+                    Pratinjau Langsung
                   </a>
                 </div>
               </div>

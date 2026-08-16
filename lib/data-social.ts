@@ -35,29 +35,29 @@ export interface Plan {
 
 export const plans: Plan[] = [
   {
-    name: "Standard",
+    name: "Standar",
     price: "Rp 965.000",
     unit: "per proyek",
-    description: "Efficient solution for business landing pages or personal branding.",
+    description: "Solusi efisien untuk landing page bisnis atau personal branding yang ingin hadir lebih profesional.",
     features: [
-      "1 Responsive Page",
-      "Direct WhatsApp Integration",
-      "Basic SEO Optimization",
-      "Fast Loading 90+",
+      "1 Halaman Responsif",
+      "Integrasi WhatsApp Langsung",
+      "Optimasi SEO Dasar",
+      "Loading Cepat 90+",
     ],
     waMessage:
-      "Halo Webcraft Studio! Saya tertarik dengan paket Standard (Rp 965.000). Bisa dibantu?",
+      "Halo Webcraft Studio! Saya tertarik dengan paket Standar (Rp 965.000). Bisa dibantu?",
   },
   {
     name: "Pro",
     price: "Rp 1.500.000",
     unit: "per proyek",
-    description: "Complete package to boost business credibility & conversions.",
+    description: "Paket lengkap untuk meningkatkan kredibilitas brand dan memperbaiki konversi secara nyata.",
     features: [
-      "Multi-page (Up to 5 Pages)",
-      "Smooth & Interactive Animations",
-      "On-Page SEO & Speed Optimization",
-      "Contact Form & Analytics",
+      "Multi-halaman (hingga 5 Halaman)",
+      "Animasi Halus & Interaktif",
+      "SEO On-Page & Optimasi Kecepatan",
+      "Form Kontak & Analitik",
     ],
     highlighted: true,
     badge: "Paling Populer",
@@ -65,18 +65,18 @@ export const plans: Plan[] = [
       "Halo Webcraft Studio! Saya ingin paket Pro (Rp 1.500.000) untuk bisnis saya.",
   },
   {
-    name: "Custom",
-    price: "Custom",
+    name: "Kustom",
+    price: "Kustom",
     unit: "sesuai kebutuhan",
-    description: "Exclusive solution for custom features and large-scale needs.",
+    description: "Solusi eksklusif untuk fitur khusus, skala besar, dan kebutuhan bisnis yang lebih kompleks.",
     features: [
-      "Custom 3D/Motion Design",
-      "CMS / E-commerce Integration",
-      "Custom Architecture & API",
-      "Priority Support",
+      "Desain 3D & Motion Kustom",
+      "Integrasi CMS / E-commerce",
+      "Arsitektur & API Khusus",
+      "Prioritas Dukungan",
     ],
     waMessage:
-      "Halo Webcraft Studio! Saya ingin paket Custom. Mohon infonya mengenai kebutuhan khusus.",
+      "Halo Webcraft Studio! Saya ingin paket Kustom. Mohon infonya mengenai kebutuhan khusus.",
   },
 ];
 

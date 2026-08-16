@@ -7,7 +7,7 @@ import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MagneticButton from "@/components/MagneticButton";
 import { navLinks } from "@/lib/data-social";
-import { cn } from "@/lib/utils";
+import { cn, waLink } from "@/lib/utils";
 
 function BrandLogo() {
   return (
@@ -21,7 +21,7 @@ function BrandLogo() {
           Webcraft<span className="text-gradient"> Studio</span>
         </span>
         <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-muted-foreground">
-          Digital Agency
+          Agensi Digital Premium
         </span>
       </span>
     </a>
@@ -69,7 +69,13 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <MagneticButton>
             <Button asChild size="default" className="h-11">
-              <a href={navLinks[0].href}>Konsultasi Gratis</a>
+              <a
+                href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Konsultasi Gratis
+              </a>
             </Button>
           </MagneticButton>
         </div>
@@ -109,7 +115,12 @@ export default function Navbar() {
               ))}
             </ul>
             <Button asChild className="mt-3 w-full">
-              <a href={navLinks[0].href} onClick={() => setOpen(false)}>
+              <a
+                href={waLink("Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+              >
                 Konsultasi Gratis
               </a>
             </Button>

@@ -24,8 +24,8 @@ const Hero3D = dynamic(() => import("@/components/Hero3D"), {
 });
 
 const stats = [
-  { icon: TrendingUp, label: "On-Time Delivery", value: "100%" },
-  { icon: Star, label: "24/7 Dedicated Support", value: "Available" },
+  { icon: TrendingUp, label: "Pengiriman Tepat Waktu", value: "100%" },
+  { icon: Star, label: "Dukungan 24/7", value: "Tersedia" },
   { icon: Gauge, label: "Skor Lighthouse", value: "98" },
 ];
 
@@ -80,7 +80,7 @@ export default function Hero() {
               <Button asChild size="lg" className="h-14 px-8">
                 <a
                   href={waLink(
-                    "Halo Webcraft Studio! Saya ingin memulai proyek website bersama Anda."
+                    "Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website."
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

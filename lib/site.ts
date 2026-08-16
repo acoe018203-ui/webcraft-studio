@@ -23,7 +23,7 @@ export const site = {
 };
 
 export const CONTACT = {
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP || "6281234567890",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP || "6285218378934",
   email: "halo@webcraft.studio",
   instagram: "https://instagram.com/webcraft.studio",
   tiktok: "https://tiktok.com/@webcraft.studio",

@@ -29,10 +29,10 @@ export default function ContactCTA() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const message = [
-      "Halo Webcraft Studio! Saya ingin berkonsultasi gratis.",
+      "Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website.",
       `Nama: ${form.name}`,
       form.email ? `Email: ${form.email}` : null,
-      form.brief ? `Brief Singkat: ${form.brief}` : null,
+      form.brief ? `Ringkasan Proyek: ${form.brief}` : null,
     ]
       .filter(Boolean)
       .join("\n");
@@ -86,7 +86,7 @@ export default function ContactCTA() {
             >
               <a
                 href={waLink(
-                  "Halo Webcraft Studio! Saya ingin langsung berkonsultasi gratis melalui WhatsApp."
+                  "Halo Webcraft Studio, saya ingin konsultasi mengenai pembuatan website."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
