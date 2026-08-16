@@ -6,7 +6,6 @@
 /* ---------------------------------- Navbar --------------------------------- */
 export const navLinks = [
   { label: "Layanan", href: "#layanan" },
-  { label: "Portofolio", href: "#portofolio" },
   { label: "Proses", href: "#proses" },
   { label: "Harga", href: "#harga" },
 ];

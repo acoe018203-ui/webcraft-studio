@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoMarquee from "@/components/LogoMarquee";
 import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
 import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -20,7 +19,6 @@ export default function Home() {
         <Hero />
         <LogoMarquee />
         <Services />
-        <Portfolio />
         <Process />
         <Pricing />
         <Testimonials />
